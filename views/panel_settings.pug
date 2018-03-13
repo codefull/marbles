@@ -3,46 +3,46 @@
 	span.fa.fa-close#closeSettings
 
 	.settingsWrap
-		h3 Story Mode
+		h3 Modo de Historia
 		hr
-		p Story mode enables the step by step walk through of the invocation process.
-		p Enable story mode if you are new to Marbles or Fabric. 
+		p Este modo habilita un paseo paso a paso a través del proceso de invocación.
+		p Habilita este modo si eres nuevo ene sta aplicación. 
 
 		br
 		br
 		p 
-			span Story mode is 
-			span#storyStatus.storyOn on
+			span El modo Historia está 
+			span#storyStatus.storyOn Habilitado
 		p
-			button(type="button")#disableStoryMode Disable
+			button(type="button")#disableStoryMode Desabilitar
 			span &nbsp;&nbsp;
-			button(type="button" disabled="disabled")#enableStoryMode Enable
+			button(type="button" disabled="disabled")#enableStoryMode Habilitar
 	
 	.settingsWrap(hidden)
 		h3 
-			span Endorsements
-			span#construction (work in progress... does not work yet)
+			span Aprobaciones
+			span#construction (Aun no funciona)
 		hr
 		p 
-			span Proposals must be endorsed by a number of peers to be successful. 
-			span The exact number of endorsements will be dictated by your network's policy. 
-			span If you are new to Marbles or Fabric then select the first endorser. 
+			span Las propuestas de transacciones deben ser aprobadas por un numero definido de pares para que sean satisfactorias. 
+			span Ese número de aprobaciones va a ser decidido por las políticas de la red. 
+			span Si eres nuevo en esta aplicación entonces selecciona el primer aprobador. 
 		br
 		br
-		p Every checked endorser below will receive marble proposals.
+		p Cada aprobador debajo va a recibir propuestas para la aprobación de transacciones.
 		
 		.settingPeersWrap
 			p 
-				span Endorser 1
-				input(type="text" placeholder="Peer URL" name="peer1").longer
+				span Aprobador 1
+				input(type="text" placeholder="URL del Par" name="peer1").longer
 				input(type="checkbox" name="peer1")
 
 			p 
-				span Endorser 2
-				input(type="text" placeholder="Peer URL" name="peer2").longer
+				span Aprobador 2
+				input(type="text" placeholder="URL del Par" name="peer2").longer
 				input(type="checkbox" name="peer2")
 
 		p
-			button(type="button" disabled="disabled") Add Endorser
+			button(type="button" disabled="disabled") Adicionar Aprobador
 
 	

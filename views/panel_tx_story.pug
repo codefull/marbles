@@ -6,67 +6,67 @@
 	.txStepWrap#txStep1.inactiveStep
 		.txStatusWrap
 			.txStatus
-		.txLegend Build Proposal
+		.txLegend Propuesta de construcción
 		.txStoryWrap
 			.marbleWrap
-				div.ball#proposeMarbleStable.hideBorders.leftPos(title="Your marble tx")
+				div.ball#proposeMarbleStable.hideBorders.leftPos(title="Transacción de una canica")
 				div.ball#proposeMarble.hideBorders.leftPos
 				div.ball#marbleBorderTop.leftPos
 				div.ball#marbleBorderBottom.leftPos
 				div.ball#marbleBorderLeft.leftPos
 				div.ball#marbleBorderRight.leftPos
 		.txDescription
-			span The invocation needs to be signed and packaged as a proposal. 
-			span This is done here, in the Marbles application. 
+			span La invocación debe ser firmada y empacada como una propuesta. 
+			span Esto se hace aquí en la aplicación actual. 
 
 	//----------------- Step 2 Content
 	.txStepWrap#txStep2.inactiveStep
 		.txStatusWrap
 			.txStatus
-		.txLegend Endorsement
+		.txLegend Aprobación
 		.txStoryWrap 
 			.marbleWrap
-				div.ball#endorseMarbleStable(title="Your marble tx")
+				div.ball#endorseMarbleStable(title="Transacción de una canica")
 					span.fa.fa-check
 				div.ball#endorseMarble
 					span.fa.fa-check
 		.txDescription
-			span Next, we send the transaction proposal to our peer for endorsement. 
-			span The peer will simulate the transaction, verify the proposal, and then sign the proposal. 
-			span It is then sent back to Marbles.
+			span Ahora, se envía una propuesta de transacción al próximo par para su aprobación. 
+			span El par simula la transacción, verifica la propuesta, y luego la firma. 
+			span Luego es enviada de vuelta a la aplicación actual.
 
 	//----------------- Step 3 Content
 	.txStepWrap#txStep3.inactiveStep
 		.txStatusWrap
 			.txStatus
-		.txLegend Ordering
+		.txLegend Ordenamiento
 		.txStoryWrap
 			#orderBoxStable 
-				span.ball.ordererMarbles.hideMe(title="Another marble tx")
+				span.ball.ordererMarbles.hideMe(title="Otra transacción de canica")
 					span.fa.fa-check
-				span.ball.ordererMarbles.hideMe(title="Your marble tx")
+				span.ball.ordererMarbles.hideMe(title="Tu transacción de canica")
 					span.fa.fa-check
-				span.ball.ordererMarbles.hideMe(title="Another marble tx")
+				span.ball.ordererMarbles.hideMe(title="Otra transacción de canica")
 					span.fa.fa-check
-				#orderBox Block
+				#orderBox Bloque
 		.txDescription
-			span Then Marbles will send our endorsed proposal to the orderer. 
-			span The orderer will sequence transactions from throughout the network including ours. 
+			span Luego las Canicas enviarán nuestra propuesta de aprobación al ordenador. 
+			span Este va a establecer una secuencia de transacciones en la red de bloques, incluida la nuestra. 
 
 	//----------------- Step 4 Content
 	.txStepWrap#txStep4.inactiveStep
 		.txStatusWrap
 			.txStatus
-		.txLegend Validate & Commit
+		.txLegend Validar & Commit
 		.txStoryWrap 
 			#commitBoxStable(title="Block")
 				span.fa.fa-search
 		.txDescription
-			span The block containing our transaction is sent from the orderer to our peer. 
-			span Finally it is validated by the peer and then committed to the peer's ledger. 
+			span El bloque que contiene nuestra transacción es enviado desde el ordenador hasta nuestro par. 
+			span Finalmente este es validado por el par y guardado en el libro mayor público del par. 
 
 	div
-		.hint * Note the speed of this process is slowed down for demonstration purposes
+		.hint * Nota la velocidad de este proceso se ha reducido por propósitos demostrativos
 
 	#txStoryErrorWrap 
 		span.fa.fa-warning(style="fill: #000;")
@@ -74,7 +74,7 @@
 
 	//----------------- All done
 	.stepHelpWrap#doneTxStep
-		h2 Invoke Complete
+		h2 Invocación Completada
 		br
 		br
-		button(type="button").closeTxStory Close
+		button(type="button").closeTxStory Cerrar

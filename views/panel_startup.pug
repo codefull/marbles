@@ -3,16 +3,16 @@
 	span.fa.fa-close#closeStartUp.closeStartUp
 
 	#stepWelcomeWrap
-		h1 Hi
+		h1 Hola
 		br
 		p 
-			span Starting this application requires a few steps. 
+			span Para iniciar esta aplicación se requieren algunos pasos. 
 			br
 			br
-			strong Complete each step to fully setup marbles. 
+			strong Complete cada paso para instalar completamente la aplicación. 
 			br
 			br
-		button#startSteps Start
+		button#startSteps Inicio
 
 	//----------------- Step Navigation
 	#stepsWrap
@@ -30,7 +30,7 @@
 		.oneStepWrap.inactive(stepid="step5")
 			.stepDivide
 			.stepIcon 5
-		#stepsTitle There are 5 steps to complete. Click a step to jump to it.
+		#stepsTitle Se necesitan completar 5 pasos. Haga Click en un paso para ir a su pantalla correspndiente.
 
 
 	#detailsWrap
@@ -39,92 +39,92 @@
 		#step1.stepWrap.success
 			.stepHeader 
 				span.fa.fa-gear
-				span &nbsp;&nbsp;Check Configuration Files
+				span &nbsp;&nbsp;Chequeo de los archivos de configuración.
 			.stepDescription 
-				span The first step was to check your config JSON files for easy to make mistakes. 
-				span The file that was checked can be found in 
+				span El primer paso fue el chequeo de los archivos de configuración JSON, para comprobar errores comunes.
+				span El archivo que fue chequeado se puede encontrar en 
 				span.backgroundMe /config/#{bag.creds_filename}
 				span &nbsp;.
 
 			.failureStep 
 				p 
-					span Uh oh, there is something wrong with the config files. 
-					span The server's console has more information.
+					span Eror , hay algo incorrecto con los archivos de configuración. 
+					span Busque en la consola del servidor para mayor información.
 				br
 				p(style="font-weight: 200;") 
-					span Checkout the documentation we have on the 
-					a(href="https://github.com/IBM-Blockchain/marbles/blob/v4.0/docs/config_file.md" target="_blank" style="color:#fff;") config files.
+					span Compruebe la información de configuracion del proyecto original en los archivos 
+					a(href="https://github.com/IBM-Blockchain/marbles/blob/v4.0/docs/config_file.md" target="_blank" style="color:#fff;").
 			br
-			.successStep Step 1 Complete
+			.successStep Paso 1 Completado
 			br
 			br
-			button.nextStep(nextstepid="step2") Next Step
+			button.nextStep(nextstepid="step2") Próximo Paso
 
 		//----------------- Step 2 Content [Enroll Admin]
 		#step2.stepWrap.hidden
 			.stepHeader 
 				span.fa.fa-user
-				span &nbsp;&nbsp;Enrolling Admin
+				span &nbsp;&nbsp;Comprobación del administrador.
 			.stepDescription 
-				span Next up, we attempted to enroll you as your company's admin. 
-				span This step contacted your Certificate Authority (CA) and fed it the 
-				span.backgroundMe enrollID
-				span &nbsp;and 
-				span.backgroundMe enrollSecret
-				span &nbsp;from your creds file. 
+				span Seguidamente, intentamos loguearte como un administrador de la compañía. 
+				span Este paso contactó a tu Aautoridad Certificante  (CA) extrajo el  
+				span.backgroundMe enrollID (usuario)
+				span &nbsp; y  
+				span.backgroundMe enrollSecret (contraseña)
+				span &nbsp; de tus archivos encriptados. 
 				br
 
 			include ./template/loading.pug
 
 			.failureStep 
-				p Sorry, we could not enroll the admin against the CA. 
-				p Edit the settings below to try again.
+				p Lo sentimos, no se pudo comprobar el administrador actual contra la CA.
+				p Por favor edita la configuración debajo y vuelve a intentarlo.
 
 			.startupWrap
 				.settingsExpand 
 					span.fa.fa-plus-square
-					span &nbsp;&nbsp;JSON Settings
+					span &nbsp;&nbsp;Configuración JSON
 
 				.settingsContent
 					.stepInputLegend
-						span CA's 
 						span.backgroundMe api_url
-					input(type="text" placeholder="CA ex: 192.168.99.100:8888" name="caUrl" value=bag.creds.ca).longer
+						span de la CA 
+					input(type="text" placeholder="CA PEj.: 192.168.99.100:8888" name="caUrl" value=bag.creds.ca).longer
 					span.fa.fa-question-circle.settingstooltip
-						span.tooltiptext This is main HTTP url to reach your certificate authority. It should include the protocol and port.
+						span.tooltiptext Esta es la url HTTP principal para comprobar tu Autoridad Certificante. Debe incluirse el protocolo y el puerto.
 					br
 					.stepInputLegend
 						span.backgroundMe enrollId
-					input(type="text" placeholder="Enroll Id" name="enrollId" value=bag.creds.admin_id).longer
+					input(type="text" placeholder="Id de Usuario" name="enrollId" value=bag.creds.admin_id).longer
 					span.fa.fa-question-circle.settingstooltip
-						span.tooltiptext This is a valid enroll id for your CA. It should already be registered on the CA.
+						span.tooltiptext Este debe ser un usuario válido para tu CA. Debe estar previamente registrado en la CA.
 					br
 					.stepInputLegend
 						span.backgroundMe enrollSecret 
-					input(type="text" placeholder="Enroll Secret" name="enrollSecret" value=bag.creds.admin_secret).longer
+					input(type="text" placeholder="Contraseña" name="enrollSecret" value=bag.creds.admin_secret).longer
 					span.fa.fa-question-circle.settingstooltip
-						span.tooltiptext The enroll secret is paired with an enroll ID registered on the CA.
+						span.tooltiptext La contraseña es comprobada con el ID de usuario registrado en la CA.
 
-			.successStep Step 2 Complete
-			button.nextStep(nextstepid="step3") Next Step
-			button.runStep(stepid="step2" nextstepid="step3")#enrollAdmin Try Again
+			.successStep Paso 2 Completado
+			button.nextStep(nextstepid="step3") Próximo paso
+			button.runStep(stepid="step2" nextstepid="step3")#enrollAdmin Intente nuevamente.
 
-			.showMoreDetails Why is this important?
+			.showMoreDetails Por qué es importante?
 			.moreDetails
-				span If successful, the application will download an enrollment certificate. 
-				span The certificate will be used to authenticate future marbles transactions. 
-				span Without it we cannot create transactions. 
+				span Si es satisfactorio, la aplicación descargará un certificado de del usuario.
+				span El certificado se utilizará para autenticar las futuras transacciones de canicas. 
+				span Sin él no se pueden crear transacciones. 
 
 		//----------------- Step 3 Content [Find Chaincode]
 		#step3.stepWrap.hidden
 			.stepHeader 
 				span.fa.fa-file-text
-				span &nbsp;&nbsp;Finding Chaincode
+				span &nbsp;&nbsp; Encontrando el código de Transacciones (chaincode)
 			.stepDescription 
-				span Now we needed to locate the chaincode on your channel. 
-				span Your creds file says to check the channel 
+				span Ahora se necesita encontrar el código en tu canal de transacciones. 
+				span Tu archivo personal necesita chequear el canal 
 				span.backgroundMe #{bag.creds.channel}
-				span &nbsp; for the chaincode named 
+				span &nbsp; para el código chaincode con nombre 
 				span.backgroundMe #{bag.creds.chaincode_id}
 				span &nbsp;.
 				br
@@ -132,108 +132,110 @@
 			include ./template/loading.pug
 			
 			.failureStep 
-				p We could not find the chaincode
-				p Edit the settings below to try again
-				p(style="font-weight: 200;") OR...
+				p No se puede encontrar el código de cadena
+				p p Por favor edita la configuración debajo y vuelve a intentarlo
+				p(style="font-weight: 200;") O ...
 				p(style="font-weight: 200;") 
-					span If this is your first time using the application then&nbsp;
-					a(href="https://github.com/IBM-Blockchain/marbles/tree/v4.0#3-install-and-instantiate-chaincode" target="_blank" style="color:#fff;") install/instantiate
-					span &nbsp;marbles chaincode
+					span Si esta es la primera vez utilizando la aplicación intente &nbsp;
+					a(href="https://github.com/IBM-Blockchain/marbles/tree/v4.0#3-install-and-instantiate-chaincode" target="_blank" style="color:#fff;") instalar/instanciar
+					span &nbsp; el código de transacciones de canicas
 
 			.startupWrap
 				.settingsExpand 
 					span.fa.fa-plus-square
-					span &nbsp;&nbsp;JSON Settings
+					span &nbsp;&nbsp;COnfiguración JSON
 
 				.settingsContent
 					.stepInputLegend
-						span Orderer's 
+						span OrdenadorÑ:
 						span.backgroundMe discovery_url
-					input(type="text" placeholder="Orderer ex: 192.168.99.100:5151" name="ordererUrl" value=bag.creds.orderer).longer
+					input(type="text" placeholder="Ordenador Ej.: 192.168.99.100:5151" name="ordererUrl" value=bag.creds.orderer).longer
 					span.fa.fa-question-circle.settingstooltip
-						span.tooltiptext This is the main gRPC url to reach your orderer. It should include the protocol and port. You will be sending marbles transactions here for ordering.
+						span.tooltiptext Esta es la url principal del protocolo gRPC para llegar a la entidad que ordena las transacciones. Debe incluirse el protocolo y el puerto. Aquí es donde se vana enviar las transacciones de las canicas para su ordenamiento.
 					br
 					.stepInputLegend
-						span Peer's 
+						span Par: 
 						span.backgroundMe discovery_url
-					input(type="text" placeholder="Peer ex: 192.168.99.100:7051" name="peerUrl" value=bag.creds.peer).longer
+					input(type="text" placeholder="Par Ej.: 192.168.99.100:7051" name="peerUrl" value=bag.creds.peer).longer
 					span.fa.fa-question-circle.settingstooltip
-						span.tooltiptext This is the main gRPC url to reach your peer.  It should include the protocol and port. You will be sending marble transactions here for endorsement.
+						span.tooltiptext Esta es la url principal del protocolo gRPC para llegar a la entidad que almacena las blockchains junto a ti. Debe incluirse el protocolo y el puerto. Aquí es donde se vana enviar las transacciones de las canicas para su aprobación.
 					br
 					.stepInputLegend
 						span.backgroundMe channel 
-					input(type="text" placeholder="Channel Name" name="channelId" value=bag.creds.channel).longer
+					input(type="text" placeholder="Nombre del canal" name="channelId" value=bag.creds.channel).longer
 					span.fa.fa-question-circle.settingstooltip
-						span.tooltiptext This is the name of a channel you created on the blockchain network.
+						span.tooltiptext Este es el nombr del canal que creaste en la red blockchain.
 					br
 					.stepInputLegend
 						span.backgroundMe chaincode_id 
-					input(type="text" placeholder="Chaincode ID" name="chaincodeId" value=bag.creds.chaincode_id).longer
+					input(type="text" placeholder="ID del Chaincode" name="chaincodeId" value=bag.creds.chaincode_id).longer
 					span.fa.fa-question-circle.settingstooltip
-						span.tooltiptext This is the name of your instantiated chaincode. ex: marbles.
+						span.tooltiptext Este es el nombre del chaincode que se instanció en esta red. Ej.: marbles.
 					br
 					.stepInputLegend
 						span.backgroundMe chaincode_version 
-					input(type="text" placeholder="Chaincode ID" name="chaincodeVersion" value=bag.creds.chaincode_version).longer
+					input(type="text" placeholder="Versión del Chaincode" name="chaincodeVersion" value=bag.creds.chaincode_version).longer
 					span.fa.fa-question-circle.settingstooltip
-						span.tooltiptext This is the version of your instantiated chaincode. ex: v4.
+						span.tooltiptext Esta es la versión del chaincode instalado. Ej.: v4.
 
-			.successStep Step 3 Complete
+			.successStep Paso 3 Completado
 			br
-			button.nextStep(nextstepid="step4") Next Step
-			button.runStep(stepid="step3" nextstepid="step4")#findCcButton Try Again
+			button.nextStep(nextstepid="step4") Próximo Paso
+			button.runStep(stepid="step3" nextstepid="step4")#findCcButton Intente Nuevamente
 
-			.showMoreDetails Why is this important?
+			.showMoreDetails Por qué es importante esto?
 			.moreDetails
-				span Each channel on the network has its own ledger to store transactions. 
-				span When our chaincode is running on a channel we will be able to create and store these transactions. 
-				span There might be other types of activity on the channel, but we won't be concern with them. 
+				span Cada canal en la red tiene su propio libro mayor distribuido para guardar las transacciones.
+				span Cuando el chaincode esta corriendo en un canal, entonces el usuario estará habilitado para crear y guardar transacciones.
+				span Pudieran existir otros tipos de actividades en el canal, pero por ahora no se tendrán en cuenta.
 				br
 				br
-				span The chaincode itself is code written in GoLang. 
-				span It defines the assets (marbles) and the rules around marble transfers. 
-				span Our chaincode transactions will create and modify marbles, marble owners, and marble companies. 
-				span We cannot use this application until the chaincode is instantiated on a channel. 
+				span El chaincode en sí mismo es un código con lógica escrito en el lenguaje Go (GoLang). 
+				span En él se definen los recursos (
+				i assets 
+				//), canicas en este caso y las reglas bajo las cuales ocurren sus transferencias. 
+				span Las transacciones de chaincode van a crear y modificar, canicas, sus propietarios y sus compañías.
+				span Esta aplicación no se podrá utilizar hasta que el chaincode sea instanciado en el canal. 
 				
 		//----------------- Step 4 Content [Register Marble Owners]
 		#step4.stepWrap.hidden
 			.stepHeader 
 				span.fa.fa-group
-				span &nbsp;&nbsp;Create Assets
+				span &nbsp;&nbsp;Crear Recursos
 			.stepDescription 
-				span Almost there! 
-				span As a marbles trading company you may bring new marble owners onboard. 
-				span These marble owners represent your user base. 
+				span Casi Listo! 
+				span Como una compañía de intercambio de canicas se deben crear los propietarios de las canicas. 
+				span Estos representa tu base de usuarios. 
 				br
 				br
-				span This step will create the marble owners and 3 marbles per owner. 
+				span En este paso se van a crear 3 propietarios con 3 canicas cada uno. 
 
 			include ./template/loading.pug
 
 			.startupWrap
 				#registerOwnersInputPanel.settingsContent
 					.stepInputLegend
-						span Company 
+						span Compañía
 					input(type="text" value=bag.marble_company disabled="disabled").longer
 					span.fa.fa-question-circle.settingstooltip
-						span.tooltiptext Edit the config file and restart the application to change your company name.
+						//-- span.tooltiptext Edit the config file and restart the application to change your company name.
 					br
 					.stepInputLegend
-						span Marble Owners 
-					input(type="text" placeholder="bob, bill, amy" name="marbleOwners" value=bag.creds.marble_owners).longer
+						span Propietarios 
+					input(type="text" placeholder="Ernesto, Jhon, Jane" name="marbleOwners" value=bag.creds.marble_owners).longer
 					span.fa.fa-question-circle.settingstooltip
-						span.tooltiptext Enter the names of the marble owners you want created. Separate them by commas.
+						span.tooltiptext Entre los nombre de los propietarios que desee, separados por comas.
 					
-			.successStep Step 4 Complete
-			button.nextStep(nextstepid="step5" style="display: inline-block") Skip Step
-			button.runStep(stepid="step4" nextstepid="step5")#registerOwners Create
+			.successStep Paso 4 completo
+			button.nextStep(nextstepid="step5" style="display: inline-block") Saltar Paso
+			button.runStep(stepid="step4" nextstepid="step5")#registerOwners Crear
 
 		//----------------- Step 5 Content [Finished]
 		#step5.stepWrap.hidden.success
 			span.fa.fa-smile-o.fa-3x
 			.stepDescription(style="text-align:center")
-				span Your marbles application is ready to use!
+				span La aplicación está lista para su uso!
 				br
 				br
 			
-			button(type="button").closeStartUp Enter
+			button(type="button").closeStartUp Iniciar
