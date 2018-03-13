@@ -22,55 +22,61 @@ block content
 		
 		// --------------- Welcome Panel
 		#welcomePanel
-			h2(style="font-weight: 600;") WELCOME TO THE MARBLES DEMO APP
+			h2(style="font-weight: 600;") BIENVENIDO A LA APLICACIÓN DEMOSTRATIVA DE BLOCKCHAIN PARA INNOVASOF
 
 			#adminText
-				span Hello again 
+				span Bienvenido nuevamente! 
 				span#loginCompany #{bag.marble_company} 
 				span admin !
 
 			p 
-				span This application allows you to simulate a simple asset transaction over a Hyperledger Fabric blockchain.  
-				span You can connect multiple peers to trade with a larger marble user base. 
-				span In this application, you can: 
+				span Esta aplicación le permite simular una transferencia simple de recursos (assets).
+				span La aplicación utiliza una blockchain basada en el framework Hyperledger Fabric.
+				span Se puede conectar a multiples pares para intercambiar con una red de usuarios mayor. 
+				span En esta aplicación, usted puede: 
 			
 			#split1x3Wrap
 				.split1x3
 					.welcomeTitle
-						span Trade
-						//br
+						span Intercambiar Recursos (
+							i assets
+							//)
+						//--br
 							span Assets
 					br
-					.blub1x3 Transfer assets (marbles) across the marbles user base
+					.blub1x3 Transferir recursos (canicas) a través de la red de usuarios.
 					img(src="/imgs/welcome_img1.png").welcomeImg
 				.split1x3
 					.welcomeTitle
-						span Create
+						span Crear 
 						//br
-							span Marbles
+							span Recursos
 					br
-					.blub1x3 Create new assets (marbles)
+					.blub1x3 Crear nuevos recursos (canicas)
 					img(src="/imgs/welcome_img2.png").welcomeImg
 				.split1x3
 					.welcomeTitle
-						span Verify
+						span Verificar
 						//br
-							span Ownership
+							span Propiedad
 					br
-					.blub1x3 Verify marble transactions
+					.blub1x3 Verificar las transacciones de canicas.
 					img(src="/imgs/welcome_img3.png").welcomeImg
 			br
 			br
 
 			p 
-				span For more information, please visit our 
-				a(href="https://github.com/IBM-Blockchain/marbles/tree/v4.0") GitHub
+				span Esta aplicación es una modificación del demo de IBM-Blockchain (
+					i Marbles 
+						//) para Innovasof
+				span Para más información de la versión original, visitar: 
+				a(href="https://github.com/IBM-Blockchain/marbles/tree/v4.0")  en GitHub
 				span.
 
 
 		// --------------- Login Panel
 		form#loginPanel(method="POST" action="#")
-			p Enter
+			p Iniciar 
 			hr
-			input(type="text" placeholder="username" value="admin" name="username")
+			input(type="text" placeholder="nombre de usuario" value="admin" name="username")
 			button(type="submit") Login
