@@ -166,14 +166,14 @@ Last but not least we need marbles running somewhere.
 1. Open up your favorite browser and browse to [http://localhost:3001](http://localhost:3001) or your Bluemix www route.
     - If the site does not load, check your node console logs for the hostname/ip and port marbles is using.
 
-1. Finally we can test the application. Click the "+" icon on one of your users in the "United Marbles" section
+1. Finally we can test the application. Click the "+" icon on one of your users in the "Canicas Innovasof" section
 
 	![](/doc_images/use_marbles1.png)
 
 1. Fill out all the fields, then click the "CREATE" button
 1. After a few seconds your new marble should have appeared.
     - If not refresh the page by hitting the refresh button in your browser, or by pressing F5
-1. Next let’s trade a marble.  Drag and drop a marble from one owner to another. Only trade it to owners within "United Marbles" if you have multiple marble companies. It should temporary disappear and then redraw the marble within its new owner. That means it worked!
+1. Next let’s trade a marble.  Drag and drop a marble from one owner to another. Only trade it to owners within "Canicas Innovasof" if you have multiple marble companies. It should temporary disappear and then redraw the marble within its new owner. That means it worked!
     - If not refresh the page
 1. Now let’s delete a marble by dragging and dropping it into the trash can. It should disappear after a few seconds.
 

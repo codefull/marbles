@@ -93,7 +93,7 @@ Finalmente, precisamos executar o Marbles em algum lugar. **Escolha uma opção 
 1. Se você está nesta etapa, seu ambiente deve estar configurado, a rede de blockchain deve ter sido criada, o aplicativo Marbles e o chaincode devem estar em execução. Certo? Caso contrário, procure ajuda (na página).
 1. Abra seu navegador favorito e navegue até [http://localhost:3001](http://localhost:3001) ou até a rota www do Bluemix.
     - Se o site não carregar, verifique o nome do host/IP e a porta que o Marbles está usando nos logs do console do nó.
-1. Por fim, podemos testar o aplicativo. Clique no ícone "+" em um dos seus usuários, na seção "United Marbles"
+1. Por fim, podemos testar o aplicativo. Clique no ícone "+" em um dos seus usuários, na seção "Canicas Innovasof"
 
 
 ![](/doc_images/use_marbles1.png)
@@ -101,7 +101,7 @@ Finalmente, precisamos executar o Marbles em algum lugar. **Escolha uma opção 
 1. Depois de alguns segundos, sua nova bola de gude deve aparecer.
     - Caso contrário, pressione o botão de atualização no seu navegador ou pressione F5 para atualizar a página.
 
-1. Em seguida, vamos trocar uma bola de gude. Arraste e solte uma bola de gude de um proprietário para outro. Negocie com proprietários em "United Marbles" somente se tiver várias empresas de bolas de gude. A bola de gude deve desaparecer temporariamente e, depois, ser redesenhada com o novo proprietário. Isso significa que funcionou!
+1. Em seguida, vamos trocar uma bola de gude. Arraste e solte uma bola de gude de um proprietário para outro. Negocie com proprietários em "Canicas Innovasof" somente se tiver várias empresas de bolas de gude. A bola de gude deve desaparecer temporariamente e, depois, ser redesenhada com o novo proprietário. Isso significa que funcionou!
     - Caso contrário, atualize a página
 
 1. Agora, para excluir uma bola de gude, vamos arrastá-la e soltá-la na lixeira. Ela deve desaparecer depois de alguns segundos.

@@ -73,7 +73,7 @@ func write(stub shim.ChaincodeStubInterface, args []string) pb.Response {
 // Inputs - Array of strings
 //      0      ,         1
 //     id      ,  authed_by_company
-// "m999999999", "united marbles"
+// "m999999999", "Canicas Innovasof"
 // ============================================================================================================================
 func delete_marble(stub shim.ChaincodeStubInterface, args []string) (pb.Response) {
 	fmt.Println("starting delete_marble")
@@ -121,7 +121,7 @@ func delete_marble(stub shim.ChaincodeStubInterface, args []string) (pb.Response
 // Inputs - Array of strings
 //      0      ,    1  ,  2  ,      3          ,       4
 //     id      ,  color, size,     owner id    ,  authing company
-// "m999999999", "blue", "35", "o9999999999999", "united marbles"
+// "m999999999", "blue", "35", "o9999999999999", "Canicas Innovasof"
 // ============================================================================================================================
 func init_marble(stub shim.ChaincodeStubInterface, args []string) (pb.Response) {
 	var err error
@@ -195,7 +195,7 @@ func init_marble(stub shim.ChaincodeStubInterface, args []string) (pb.Response) 
 // Inputs - Array of Strings
 //           0     ,     1   ,   2
 //      owner id   , username, company
-// "o9999999999999",     bob", "united marbles"
+// "o9999999999999",     bob", "Canicas Innovasof"
 // ============================================================================================================================
 func init_owner(stub shim.ChaincodeStubInterface, args []string) pb.Response {
 	var err error

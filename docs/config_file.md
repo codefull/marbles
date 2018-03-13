@@ -22,7 +22,7 @@ Especially the creds file (section 2) since it has the IPs and other network det
     "cred_filename": "blockchain_creds_tls.json",
     "use_events": true,
     "keep_alive_secs": 120,
-    "company": "United Marbles",
+    "company": "Canicas Innovasof",
     "usernames": [
         "amy",
         "alice",

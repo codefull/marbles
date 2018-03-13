@@ -75,7 +75,7 @@ func read(stub shim.ChaincodeStubInterface, args []string) pb.Response {
 // {
 //	"owners": [{
 //			"id": "o99999999",
-//			"company": "United Marbles"
+//			"company": "Canicas Innovasof"
 //			"username": "alice"
 //	}],
 //	"marbles": [{
@@ -83,7 +83,7 @@ func read(stub shim.ChaincodeStubInterface, args []string) pb.Response {
 //		"color": "white",
 //		"docType" :"marble",
 //		"owner": {
-//			"company": "United Marbles"
+//			"company": "Canicas Innovasof"
 //			"username": "alice"
 //		},
 //		"size" : 35

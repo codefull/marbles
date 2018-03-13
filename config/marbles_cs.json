@@ -2,11 +2,11 @@
 	"cred_filename": "blockchain_cs.json",
 	"use_events": true,
 	"keep_alive_secs": 120,
-	"company": "United Marbles",
+	"company": "Innovasof Marbles Division",
 	"usernames": [
-		"amy",
-		"alice",
-		"ava"
+		"Ernesto",
+		"Jhon",
+		"Jane"
 	],
 	"port": 32001
 }

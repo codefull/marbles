@@ -1,7 +1,7 @@
 {
 	"name": "marbles",
 	"version": "4.0.0",
-	"description": "A demonstration Node.js web application on Hyperledger Fabric.",
+	"description": "Aplicación demostrativa web basada en Node.js usando Hyperledger Fabric.",
 	"main": "app.js",
 	"scripts": {
 		"start": "node app.js"
@@ -35,7 +35,7 @@
 		"gulp-rename": "*"
 	},
 	"author": {
-		"name": "David Huffman"
+		"name": "David Huffman -- Modificado por Ernesto de la Cruz Guevara Ramírez"
 	},
 	"license": "Apache-2.0"
 }
